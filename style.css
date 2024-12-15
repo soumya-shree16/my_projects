@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: black;
+    color:white;
+}
+.head{
+    width: 100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)) ,url("img/Netflix-Background.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    padding: 10px ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 10px 0;
+    
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+    margin-left: 70px;
+}
+nav button{
+    border: 0;
+    outline:0;
+    background: red;
+    color: rgb(250, 251, 252);
+    padding: 7px 20px;
+    font-size:12px;
+    border-radius:4px;
+    margin-left: 20px;
+   cursor:pointer;
+}
+.lang{
+    width: 90px;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #f2eded;
+    padding: 7px 10px;
+}
+#ss{
+    margin-right: 100px;
+}
+.main{
+    text-align: center;
+    padding-top: 200px;
+    font-size: 1.5rem;
+    position: relative;
+    font-family:sans-serif;
+    transform:(-50px,50px) ;
+}
+.main h3{
+    padding:20px;
+    font-size: 27px;
+    font-family:sans-serif;
+    color: aliceblue;
+}
+.main p{
+    font-family:sans-serif;
+    padding: 10px; 
+}
+.mail{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+#in{
+    
+    height: 50px;
+    width: 22%;
+    background: whitesmoke;
+    color: azure;
+    border: 0;
+    outline: 0;
+    border: 1px solid white;
+    margin-right: 18px;
+    font-size: 12px solid;
+    text-align: starts;
+}
+#bt{
+    background-color: red;
+    color:beige;
+    border: 0;
+    outline: 0;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.feature1{
+    padding:50px 12%;
+    font-size:22px;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 0;
+    align-items: center;
+}
+.text1{
+    margin-bottom: 20px;
+    flex-basis: 50%;
+    
+}
+.img{
+    margin-bottom: 20px;
+    flex-basis: 50%;
+}
+.img img{
+    display:block;
+    width:90%;
+    margin: auto;
+}
+.feature1 h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.faq{
+    text-align: center;
+    font-size: 22px;
+    padding:10px 12%;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+.cod{
+    margin:60px auto;
+    width:100%;
+    max-width: 750px;
+}
+.cod li{
+    list-style:none;
+    width:100%;
+    padding: 5px;
+}
+.content p{
+    font-size: 18px;
+}
+.cod li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size:18px ;
+    font-weight: 500;
+    background: #2d2b2b;
+    margin-bottom: 20px;
+    cursor:pointer;
+    position:relative;
+}
+label::after{
+    content:'+';
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display:none;
+}
+.cod .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition:max-height 0.5s,padding 0.5s ;
+
+}
+.cod input[type="radio"]:checked + label+ .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.cod input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .mail{
+    max-width: 1100px;
+    margin:20px auto 60px ;
+}
+.faq small{
+    font-size: 20px;
+}
+.footer{
+    padding: 50px 15px 10px;
+    border-top: 7px solid #333;
+    color:#777;
+}
+.footer h2{
+    font-size:18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display:block;
+    text-decoration: none;
+    color:#777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+   align-items: flex-start;
+   padding: 10px 0;
+}
+.footer .lang{
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyri{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width:600px){
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+    nav .lang{
+        padding: 4px 8px;
+    }
+    .main{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .main h1{
+        font-size: 30px;
+    }
+    .mail button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .text1, .img{
+        flex-basis: 100%;
+    }
+    .feature1 h2{
+        font-size: 30px;
+    }
+    .feature1 p{
+        font-size: 15px;
+    }
+    .row:nth-child(2),.row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .feature1 .row{
+        padding: 10px 0;
+    }
+    .faq h2{
+        font-size: 20px;
+    }
+    .cod .content{
+        font-size: 14px;
+    }
+    .cod li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
